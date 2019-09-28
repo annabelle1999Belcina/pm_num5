@@ -63,33 +63,24 @@ class Countdown extends Component {
 
         return (
             <center>
-                <div className="Countdown">
-                <div className="Countdown-header">Countdown</div>
-                <div className="Countdown-label">Minutes : Seconds</div>
-                <div className="Countdown-display">
-                    <button onClick={() => this.adjustTimer("incMinutes")}>
-                    +
-                    </button>
-                    <button onClick={() => this.adjustTimer("incSeconds")}>
-                    +
-                    </button>
-        
-                    <div className="Countdown-time">
-                    {minutes} : {seconds}
+                <div class="container">
+                    <div class="box">
+                        <h1>Countdown</h1>
+                        <h1>Minutes : Seconds</h1>
+                        <button onClick={() => this.adjustTimer("incMinutes")}>+</button>
+                        <button onClick={() => this.adjustTimer("incSeconds")}>+</button>
+                        <h2>
+                        {minutes} : {seconds}
+                        </h2>
+                        <button onClick={() => this.adjustTimer("decMinutes")}>-</button>
+                        <button onClick={() => this.adjustTimer("decSeconds")}>-</button>
+                        <br></br><br></br>
+                        {timerOn === false && (timerStart === 0 || timerTime === timerStart) &&(
+                            <button className="Button-start" onClick={this.startTimer}>
+                            Start
+                            </button>
+                        )}
                     </div>
-                    <button onClick={() => this.adjustTimer("decMinutes")}>
-                    -
-                    </button>
-                    <button onClick={() => this.adjustTimer("decSeconds")}>
-                    -
-                    </button>
-                </div>
-                <br></br>
-                {timerOn === false && (timerStart === 0 || timerTime === timerStart) &&(
-                    <button className="Button-start" onClick={this.startTimer}>
-                    Start
-                    </button>
-                )}
                 </div>
             </center>
         );

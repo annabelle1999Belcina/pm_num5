@@ -1,20 +1,13 @@
 import React, { Component } from "react";
-
-// import Stopwatch from "./components/Stopwatch";
 import Countdown from "./Countdown";
+import './MyStyle.css';
 
 class App extends Component {
-render() {
-return (
-<div className="App">
-{/* <div></div> */}
-<div className="Timers">
-{/* <Stopwatch /> */}
-<Countdown />
-</div>
-</div>
-);
-}
+    render() {
+        return (
+            <Countdown />
+        );
+    }
 }
 
 export default App;
